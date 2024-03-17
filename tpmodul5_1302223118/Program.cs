@@ -1,7 +1,18 @@
-﻿internal class Program
+﻿using System;
+
+public class HaloGeneric
 {
-    private static void Main(string[] args)
+    public void SapaUser<T>(T user)
     {
-        Console.WriteLine("Hello, World!");
+        Console.WriteLine($"Halo user {user}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        HaloGeneric halo = new HaloGeneric();
+        halo.SapaUser<String>("Rakha");
     }
 }
